@@ -1,0 +1,22 @@
+# Default FilmOpsConfig values, in YAML form. Loadable via PyYAML when needed.
+# NOTE: this is documentation-only by default — there is no built-in YAML loader yet.
+checkpoint_dir: ./checkpoints
+device: cuda
+batch_size: 8
+enabled_operators: null   # null → all registered operators
+
+operator_configs:
+  shot_scale:
+    ckpt: shot_scale/dinov2_shot_scale.pth
+    backbone_ckpt: shot_scale/dinov2_vitb14_pretrain.pth
+  composition:
+    ckpt: composition/dinov3_composition.pth
+    backbone_ckpt: composition/dinov3_vitb16_pretrain_lvd1689m-73cec8be.pth
+  camera_angle:
+    ckpt_subdir: camera_angle
+  color_tone:
+    ckpt: color_tone/resnet18_color_tone.pth
+  character_layout:
+    ckpt: character_layout/character_layout_ckpt
+  camera_movement:
+    ckpt: camera_movement/camera_movement_ckpt

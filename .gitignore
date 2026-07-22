@@ -1,0 +1,47 @@
+# Byte-compiled / optimized
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Model checkpoints (download separately) — keep the README and any
+# per-subdir .gitkeep, ignore everything else.
+checkpoints/*
+!checkpoints/.gitkeep
+!checkpoints/README.md
+*.pth
+*.pt
+*.bin
+*.safetensors
+
+# Pytest / mypy / coverage caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+workspace/
+*.log

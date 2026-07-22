@@ -1,0 +1,94 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "filmops"
+dynamic = ["version"]
+description = "FilmOps: Operator Toolkit for FilmBench"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.9"
+authors = [
+    {name = "FilmOps Team"},
+]
+keywords = [
+    "video-generation",
+    "evaluation",
+    "cinematography",
+    "shot-classification",
+    "film-analysis",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "torch>=1.13.0",
+    "torchvision>=0.14.0",
+    "numpy>=1.21.0",
+    "opencv-python>=4.5.0",
+    "Pillow>=9.0.0",
+    "ffmpeg-python>=0.2.0",
+    "decord>=0.6.0",
+    "transformers>=4.30.0",
+    "einops>=0.4.0",
+    "tqdm>=4.60.0",
+    # Not imported by FilmOps directly, but required at runtime by the model
+    # code loaded via trust_remote_code (InternVL modeling_*.py) and by the
+    # DINOv2/DINOv3 hubconf backbones.
+    "timm>=0.9.0",
+    "peft>=0.4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+    "ruff",
+    "mypy",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-org/FilmOps"
+Repository = "https://github.com/your-org/FilmOps"
+Issues = "https://github.com/your-org/FilmOps/issues"
+
+[tool.setuptools.packages.find]
+# Only the `filmops` package is shipped. `examples/`, `scripts/`, `tests/`,
+# `configs/`, `docs/` are repo-only and excluded from the wheel.
+include = ["filmops*"]
+
+[tool.setuptools.dynamic]
+# Single source of truth for the version lives in `filmops/_version.py`.
+version = {attr = "filmops._version.__version__"}
+
+[tool.setuptools.package-data]
+# Ship the PEP 561 marker so downstreams get the inline type hints.
+filmops = ["py.typed"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "requires_ckpt: integration tests that require real model weights",
+]

@@ -1,0 +1,10 @@
+# Only enable lightweight frame-level vision operators (no MLLM).
+checkpoint_dir: ./checkpoints
+device: cuda
+batch_size: 8
+video_fps: 5
+enabled_operators:
+  - shot_scale
+  - composition
+  - camera_angle
+  - color_tone

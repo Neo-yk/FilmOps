@@ -1,0 +1,8 @@
+# Only enable MLLM-based operators (character layout + camera movement).
+checkpoint_dir: ./checkpoints
+device: cuda
+batch_size: 1
+video_fps: 5
+enabled_operators:
+  - character_layout
+  - camera_movement
