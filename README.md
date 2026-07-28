@@ -2,6 +2,18 @@
   <img src="assets/FilmOps.png" alt="FilmOps logo" width="70%">
 </p>
 
+<p align="center">
+  <a href="https://arxiv.org/pdf/2607.24241">
+    <img src="https://img.shields.io/badge/arXiv-Paper-b31b1b?style=flat-square" alt="arXiv">
+  </a>
+  <a href="https://huggingface.co/Neo961/FilmOps">
+    <img src="https://img.shields.io/badge/%F0%9F%A4%97-Model-yellow?style=flat-square" alt="Model">
+  </a>
+  <a href="https://huggingface.co/datasets/Neo961/FilmOps">
+    <img src="https://img.shields.io/badge/%F0%9F%A4%97-Dataset-yellow?style=flat-square" alt="Dataset">
+  </a>
+</p>
+
 ## Overview
 
 Existing video generation benchmarks focus on general perceptual quality but remain coarse-grained when it comes to professional cinematographic language — general-purpose MLLMs struggle with film-specific attributes, and domain expert models (e.g., aesthetic predictors) suffer from a significant domain gap with cinematic content. **FilmOps** bridges this gap: an open-source operator suite that maps video frames into structured cinematographic labels across six core dimensions, with all category definitions aligned to industry-standard references and validated by practitioners.
@@ -204,17 +216,6 @@ print(result["labels"])
 ```
 
 ---
-
-## Models & Dataset
-
-- **Pre-trained operator checkpoints**: [Neo961/FilmOps](https://huggingface.co/Neo961/FilmOps)
-- **FilmOps test set**: [Neo961/FilmOps (dataset)](https://huggingface.co/datasets/Neo961/FilmOps)
-
----
-
-## Citation
-
-If you use FilmOps in your research, please cite.
 
 ## License
 
