@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://arxiv.org/pdf/2607.24241"><img src="https://img.shields.io/badge/arXiv-Paper-b31b1b?style=flat-square" alt="arXiv" style="margin:0 8px"></a><a href="https://huggingface.co/Neo961/FilmOps"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Model-yellow?style=flat-square" alt="Model" style="margin:0 8px"></a><a href="https://huggingface.co/datasets/Neo961/FilmOps"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Dataset-yellow?style=flat-square" alt="Dataset" style="margin:0 4px"></a>
+  <a href="https://arxiv.org/pdf/2607.24241"><img src="https://img.shields.io/badge/arXiv-Paper-b31b1b?style=flat-square" alt="arXiv"></a>&ensp;<a href="https://huggingface.co/Neo961/FilmOps"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Model-yellow?style=flat-square" alt="Model"></a>&ensp;<a href="https://huggingface.co/datasets/Neo961/FilmOps"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Dataset-yellow?style=flat-square" alt="Dataset"></a>
 </p>
 
 ## Overview
